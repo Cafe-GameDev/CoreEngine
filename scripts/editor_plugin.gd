@@ -26,12 +26,12 @@ func _exit_tree():
 			plugin_panel.free()
 
 func _create_plugin_panel():
-	plugin_panel = get_editor_interface().get_base_control().find_child("CafeEngine", true, false)
+	plugin_panel = get_editor_interface().get_base_control().find_child("CorePanel", true, false)
 	if plugin_panel:
 		return
 
 	plugin_panel = ScrollContainer.new()
-	plugin_panel.name = "CafeEngine"
+	plugin_panel.name = "CorePanel"
 	plugin_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	plugin_panel.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	plugin_panel.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -47,3 +47,4 @@ func _create_plugin_panel():
 	plugin_panel.add_child(vbox_container)
 
 	add_control_to_dock(DOCK_SLOT_RIGHT_UL, plugin_panel)
+	CoreEngine.CorePanel = true
