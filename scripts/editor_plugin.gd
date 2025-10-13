@@ -21,7 +21,6 @@ func _exit_tree():
 		if plugin_panel.get_parent() != null:
 			remove_control_from_docks(plugin_panel)
 		plugin_panel.free()
-	CoreEngine.CorePanel = false
 
 func _create_plugin_panel():
 	plugin_panel = get_editor_interface().get_base_control().find_child("CorePanel", true, false)
@@ -32,6 +31,5 @@ func _create_plugin_panel():
 	if scene and scene is PackedScene:
 		plugin_panel = scene.instantiate()
 		add_control_to_dock(DOCK_SLOT_RIGHT_UL, plugin_panel)
-		CoreEngine.CorePanel = true
 	else:
 		push_error("Could not load CorePanel scene from: " + PANEL_SCENE_PATH)
