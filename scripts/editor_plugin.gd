@@ -3,7 +3,6 @@ extends EditorPlugin
 
 const AUTOLOAD_NAME = "CoreEngine"
 const AUTOLOAD_PATH = "res://addons/core_engine/utils/core_engine.gd"
-const GROUP_SCENE_PATH = "res://addons/core_engine/panel/data_panel.tscn"
 
 var plugin_panel: ScrollContainer
 var group_panel: VBoxContainer
