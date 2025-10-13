@@ -19,11 +19,10 @@ func _exit_tree():
 		remove_autoload_singleton(AUTOLOAD_NAME)
 
 	if is_instance_valid(plugin_panel):
-		var content_container = plugin_panel.get_node_or_null("VBoxContainer")
-		if content_container and content_container.get_child_count() == 0:
-			if plugin_panel.get_parent() != null:
-				remove_control_from_docks(plugin_panel)
-			plugin_panel.free()
+		if plugin_panel.get_parent() != null:
+			remove_control_from_docks(plugin_panel)
+		plugin_panel.free()
+	CoreEngine.CorePanel = false
 
 func _create_plugin_panel():
 	plugin_panel = get_editor_interface().get_base_control().find_child("CorePanel", true, false)
