@@ -9,6 +9,7 @@ const BLUEPRINT_TOP_PANEL_SCENE_PATH = "res://addons/core_engine/panel/blueprint
 
 var plugin_panel: ScrollContainer
 var resource_top_panel_instance: Control
+var blueprint_top_panel_instance: Control
 
 func _enter_tree():
 	if not ProjectSettings.has_setting("autoload/" + AUTOLOAD_NAME):
