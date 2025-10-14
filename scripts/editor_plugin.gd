@@ -26,7 +26,7 @@ func _enter_tree():
 		EditorInterface.get_editor_main_screen().add_child(resource_top_panel_instance)
 		resource_top_panel_instance.hide()
 	else:
-		push_error("Could not load CoreTopPanel scene from: " + RESOURCE_TOP_PANEL_SCENE_PATH)
+		push_error("Could not load ResourceTopPanel scene from: " + RESOURCE_TOP_PANEL_SCENE_PATH)
 
 func _exit_tree():
 	if ProjectSettings.has_setting("autoload/" + AUTOLOAD_NAME):
