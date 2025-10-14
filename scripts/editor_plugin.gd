@@ -5,20 +5,17 @@ const AUTOLOAD_NAME = "CoreEngine"
 const AUTOLOAD_PATH = "res://addons/core_engine/utils/core_engine.gd"
 const PANEL_SCENE_PATH = "res://addons/core_engine/panel/core_side_panel.tscn"
 const RESOURCE_TOP_PANEL_SCENE_PATH = "res://addons/core_engine/panel/resource_top_panel.tscn"
+const BLUEPRINT_TOP_PANEL_SCENE_PATH = "res://addons/core_engine/panel/blueprint_top_panel.tscn"
 
 var plugin_panel: ScrollContainer
 var resource_top_panel_instance: Control
-var blueprint_plugin: EditorPlugin
+var blueprint_top_panel_instance: Control
 
 func _enter_tree():
 	if not ProjectSettings.has_setting("autoload/" + AUTOLOAD_NAME):
 		add_autoload_singleton(AUTOLOAD_NAME, AUTOLOAD_PATH)
 	
 	_create_plugin_panel()
-
-	var plugin_script = load("res://addons/core_engine/scripts/blueprint_editor_plugin.gd")
-	blueprint_plugin = plugin_script.new()
-	add_child(blueprint_plugin)
 
 	var scene = load(RESOURCE_TOP_PANEL_SCENE_PATH)
 	if scene and scene is PackedScene:
@@ -31,9 +28,6 @@ func _enter_tree():
 func _exit_tree():
 	if ProjectSettings.has_setting("autoload/" + AUTOLOAD_NAME):
 		remove_autoload_singleton(AUTOLOAD_NAME)
-
-	if blueprint_plugin:
-		blueprint_plugin.queue_free()
 
 	if is_instance_valid(plugin_panel):
 		if plugin_panel.get_parent() != null:
