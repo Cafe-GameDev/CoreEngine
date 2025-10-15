@@ -6,7 +6,7 @@ extends ScrollContainer
 const DOCS : String = "https://www.cafegame.dev/cafeengine"
 
 func _ready() -> void:
-	ResourceEditor.ResourcePanel = true
+	ResourceEditor.CafeSidePanel = true
 
 func _on_docs_button_pressed() -> void:
 	OS.shell_open(DOCS)

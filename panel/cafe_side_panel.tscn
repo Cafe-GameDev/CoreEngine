@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cw24tw83tynlt"]
 
-[ext_resource type="Script" uid="uid://c1wk5sxwbbjmk" path="res://addons/resource_editor/panel/resource_side_panel.gd" id="1_dmmms"]
+[ext_resource type="Script" uid="uid://c1wk5sxwbbjmk" path="res://addons/resource_editor/panel/cafe_side_panel.gd" id="1_dmmms"]
 [ext_resource type="Texture2D" uid="uid://4nqr0amw8uit" path="res://addons/resource_editor/icons/book-open-text.svg" id="2_ds1b3"]
 
-[node name="ResourcePanel" type="ScrollContainer"]
+[node name="CafeSidePanel" type="ScrollContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

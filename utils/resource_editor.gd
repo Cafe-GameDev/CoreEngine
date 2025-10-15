@@ -1,4 +1,4 @@
 @tool
 extends Node
 
-var ResourcePanel : bool = false
+var CafeSidePanel : bool = false

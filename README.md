@@ -9,7 +9,7 @@ O **ResourceEditor** é o núcleo da suíte CafeEngine, fornecendo a infraestrut
 
 *   **Infraestrutura Compartilhada:** Oferece classes base e utilitários que são estendidos e utilizados por todos os plugins da CafeEngine.
 *   **Gerenciamento de Plugins:** Facilita o registro e a coordenação de outros plugins da suíte, garantindo que funcionem harmoniosamente.
-*   **ResourcePanel (Host de SidePanels):** Atua como o host unificado para todos os SidePanels dos plugins da CafeEngine, centralizando as interfaces de configuração rápida em um único local no editor.
+*   **CafeSidePanel (Host de SidePanels):** Atua como o host unificado para todos os SidePanels dos plugins da CafeEngine, centralizando as interfaces de configuração rápida em um único local no editor.
 *   **ResourceTopPanel (Editor de Resources):** Inclui um editor de alto nível dedicado à visualização e edição de arquivos `.tres` como texto/código, proporcionando uma ferramenta universal para gerenciar Resources.
 
 ## Documentação
