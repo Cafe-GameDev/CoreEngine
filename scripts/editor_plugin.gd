@@ -5,11 +5,9 @@ const AUTOLOAD_NAME = "CoreEngine"
 const AUTOLOAD_PATH = "res://addons/core_engine/utils/core_engine.gd"
 const PANEL_SCENE_PATH = "res://addons/core_engine/panel/core_side_panel.tscn"
 const RESOURCE_TOP_PANEL_SCENE_PATH = "res://addons/core_engine/panel/resource_top_panel.tscn"
-const BLUEPRINT_TOP_PANEL_SCENE_PATH = "res://addons/core_engine/panel/blueprint_top_panel.tscn"
 
 var plugin_panel: ScrollContainer
 var resource_top_panel_instance: Control
-var blueprint_top_panel_instance: Control
 
 func _enter_tree():
 	if not ProjectSettings.has_setting("autoload/" + AUTOLOAD_NAME):
