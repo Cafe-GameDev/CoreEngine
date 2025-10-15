@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://xux45asd4q1t"]
 
-[ext_resource type="Script" uid="uid://bynnh7x2auuhk" path="res://addons/core_engine/panel/resource_top_panel.gd" id="1_ja1bn"]
+[ext_resource type="Script" uid="uid://bynnh7x2auuhk" path="res://addons/resource_editor/panel/resource_top_panel.gd" id="1_ja1bn"]
 
 [node name="ResourceTopPanel" type="Control"]
 layout_mode = 3

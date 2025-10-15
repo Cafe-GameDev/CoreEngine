@@ -1,10 +1,10 @@
 @tool
 extends EditorPlugin
 
-const AUTOLOAD_NAME = "CoreEngine"
-const AUTOLOAD_PATH = "res://addons/core_engine/utils/core_engine.gd"
-const PANEL_SCENE_PATH = "res://addons/core_engine/panel/core_side_panel.tscn"
-const RESOURCE_TOP_PANEL_SCENE_PATH = "res://addons/core_engine/panel/resource_top_panel.tscn"
+const AUTOLOAD_NAME = "ResourceEditor"
+const AUTOLOAD_PATH = "res://addons/resource_editor/utils/resource_editor.gd"
+const PANEL_SCENE_PATH = "res://addons/resource_editor/panel/resource_side_panel.tscn"
+const RESOURCE_TOP_PANEL_SCENE_PATH = "res://addons/resource_editor/panel/resource_top_panel.tscn"
 
 var plugin_panel: ScrollContainer
 var resource_top_panel_instance: Control
@@ -51,7 +51,7 @@ func _get_plugin_name():
 	return "Resources"
 
 func _create_plugin_panel():
-	plugin_panel = get_editor_interface().get_base_control().find_child("CorePanel", true, false)
+	plugin_panel = get_editor_interface().get_base_control().find_child("ResourcePanel", true, false)
 	if plugin_panel:
 		return
 
@@ -60,4 +60,4 @@ func _create_plugin_panel():
 		plugin_panel = scene.instantiate()
 		add_control_to_dock(DOCK_SLOT_RIGHT_UL, plugin_panel)
 	else:
-		push_error("Could not load CorePanel scene from: " + PANEL_SCENE_PATH)
+		push_error("Could not load ResourcePanel scene from: " + PANEL_SCENE_PATH)
